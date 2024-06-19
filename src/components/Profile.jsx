@@ -10,21 +10,21 @@ export const Profile = (props) => {
     <div className="row">
       <div className="col-md-4">
         <img className="img-fluid"
-          src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436178.jpg"
+          src={user.avatar}
           alt="Фото пользователя"
         />
       </div>
       <div className="col-md-8">
         <h2 className={styles.name}>
-          Фамилия имя: <span> Серега </span>
+          Фамилия имя: <span> {user.lastname} {user.name} </span>
         </h2>
         <p className={styles.email}>
-          Email: <span> sergo@mail.ru </span>
+          Email: <span> {user.email} </span>
         </p>
         <p style={idStyle}>
-          Id: <span> 4 </span>
+          Id: <span> {user.id} </span>
         </p>
-        <p style={{ fontSize: 24, color: "red" }}>История о себе: </p>
+        <p style={{ fontSize: 24, color: "red" }}> {user.about} </p>
       </div>
     </div>
   );
