@@ -39,7 +39,10 @@ const users = {
     about: "Тут мой рассказ о себе",},
 };
 
-export function getUser() {
+export function getUser(userId) {
+  for(let i = 0; i < Object.keys(users).length; i++) {
+    if(users[i].id == userId) return users[i];
+  }
   return user;
 }
 
