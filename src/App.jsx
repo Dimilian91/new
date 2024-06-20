@@ -1,5 +1,5 @@
 import { NavLink, Route, Routes } from "react-router-dom";
-import { Settings } from "./components/Settings";
+import Settings from "./components/Settings";
 import { Friends } from "./components/Friends";
 import { Profile } from "./components/Profile";
 import { Messages } from "./components/Messages";
