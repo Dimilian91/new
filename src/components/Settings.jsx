@@ -1,3 +1,4 @@
+import { useState } from "react"
 
 const products = [
   {
@@ -32,10 +33,11 @@ const products = [
     imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
     imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
   },
-  // More products...
 ]
 
 export default function Settings() {
+  const [count, setCount] = useState(0);
+  
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -55,6 +57,12 @@ export default function Settings() {
               <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
             </a>
           ))}
+        </div>
+        <div className="grid grid-cols-2 gap-6 mt-11 border-2 p-10 py-3 text-white">
+          <div className="w-full"> 
+            <button className="bg-indigo-500 rounded-md px-3 text-xl" onClick={() => {setCount(count + 1)}}>Нажми на меня</button>
+          </div>
+          <div className="w-full text-lg text-orange-300">Колличество кликов: {count}</div>
         </div>
       </div>
     </div>
